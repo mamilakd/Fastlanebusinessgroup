@@ -1,0 +1,11 @@
+-- create database and contacts table
+CREATE DATABASE IF NOT EXISTS fastline CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE fastline;
+
+CREATE TABLE IF NOT EXISTS contacts (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(191) NOT NULL,
+  email VARCHAR(191) NOT NULL,
+  message TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
